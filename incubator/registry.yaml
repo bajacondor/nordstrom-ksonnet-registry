@@ -4,3 +4,6 @@ libraries:
   node:
     version: master
     path: node
+  simple-application:
+    version: master
+    path: simple-application
