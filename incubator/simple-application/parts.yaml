@@ -17,6 +17,7 @@
     "flags": {
       "name": "sample-app",
       "namespace": "default"
-    }
+    },
+    "comment": "A simple service and deployment"
   }
 }

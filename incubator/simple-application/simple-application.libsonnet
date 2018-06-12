@@ -4,7 +4,7 @@
 {
   parts:: {
 
-    service(values):: {
+    service(name, namespace):: {
       local defaults = {
         serviceType:: "LoadBalancer",
       },
@@ -12,22 +12,21 @@
       apiVersion: "v1",
       kind: "Service",
       metadata: {
-        namespace: values.namespace,
-        name: values.name,
+        namespace: namespace,
+        name: name,
         labels: {
-          app: values.name,
+          app: name,
         },
       },
       spec: {
-        type: if std.objectHas(values, "serviceType") then values.serviceType else defaults.serviceType,
+        type: defaults.serviceType,
         ports: [
           {
             name: "http",
             port: 80,
             targetPort: "http",
           },
-        ],
-        selector: values.selector,
+        ]
       },
     },
 
