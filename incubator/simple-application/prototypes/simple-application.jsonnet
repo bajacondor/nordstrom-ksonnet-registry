@@ -1,6 +1,7 @@
 // @apiVersion 0.0.1
 // @name io.ksonnet.pkg.simple-application
 // @description Deploy a simple app to kubernetes.
+// @shortDescription Deploy a simple app to kubernetes.
 // @param namespace string location and tag of image
 // @param name string json file containing values.
 
