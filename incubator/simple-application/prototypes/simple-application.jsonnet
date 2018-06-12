@@ -2,7 +2,7 @@
 // @name io.ksonnet.pkg.simple-application
 // @description Deploy a simple app to kubernetes.
 // @param image string location and tag of image
-// @param name file json file containing values.
+// @param values string json file containing values.
 
 local k = import 'k.libsonnet';
 local app = import 'incubator/simple-application/simple-application.libsonnet';
