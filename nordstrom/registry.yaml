@@ -1,6 +1,12 @@
 apiVersion: '0.1'
 kind: ksonnet.io/registry
 libraries:
+  node:
+    version: master
+    path: node
   simple-application:
     version: master
     path: simple-application
+  datadog:
+    version: master
+    path: datadog
