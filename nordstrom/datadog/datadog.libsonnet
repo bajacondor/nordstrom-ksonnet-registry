@@ -1,6 +1,6 @@
 {
     parts:: {
-        container(apikey):: {
+        container(secretName, secretKey):: {
             spec+: {
                 template+: {
                     spec+: {
@@ -10,7 +10,12 @@
                             env: [
                                 {
                                     name: "DATADOG_API_KEY",
-                                    value: apikey
+                                    valueFrom: {
+                                        secretKeyRef: {
+                                            name: secretName,
+                                            key: secretKey
+                                        }
+                                    }
                                 }
                             ],
                             imagePullPolicy: "IfNotPresent",
