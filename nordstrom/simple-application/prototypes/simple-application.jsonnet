@@ -3,12 +3,12 @@
 // @description Deploy a simple app to kubernetes.
 // @shortDescription Deploy a simple app to kubernetes.
 // @param name string name of service.
-// @param image string Location and tag of container image.
+// @optionalParam image string image Location and tag of container image.
 // @optionalParam namespace string default K8S Namespace. Defaults to context.
 // @optionalParam replicas number 1 Number of replicas. Defaults to 1.
 // @optionalParam cpuRequest string 300m Requested cpu resources. Defaults to 300m.
 // @optionalParam memoryRequest string 200Mi Requested memory resources. Defaults to 200Mi.
-// @optionalParam containerPort number 808 Container port. Defaults to 8080.
+// @optionalParam containerPort number 8080 Container port. Defaults to 8080.
 // @optionalParam protocol string HTTP Protocol of service. Defaults to HTTP.
 
 local k = import 'k.libsonnet';
