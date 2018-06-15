@@ -12,7 +12,7 @@
 // @optionalParam protocol string Protocol of service. Defaults to TCP.
 
 local k = import 'k.libsonnet';
-local app = import 'incubator/simple-application/simple-application.libsonnet';
+local app = import 'nordstrom/simple-application/simple-application.libsonnet';
 
 local name = "import 'param://name'";
 local namespace = "import 'param://namespace'";
