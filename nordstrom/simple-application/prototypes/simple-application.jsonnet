@@ -6,9 +6,9 @@
 // @param image string Location and tag of container image.
 // @optionalParam namespace string Location and tag of image. Defaults to context.
 // @optionalParam replicas number Number of replicas. Defaults to 1.
-// @optionalParam cpu-request string Requested cpu resources. Defaults to 300m.
-// @optionalParam memory-request string Requested memory resources. Defaults to 200Mi.
-// @optionalParam container-port number Container port. Defaults to 8080.
+// @optionalParam cpuRequest string Requested cpu resources. Defaults to 300m.
+// @optionalParam memoryRequest string Requested memory resources. Defaults to 200Mi.
+// @optionalParam containerPort number Container port. Defaults to 8080.
 // @optionalParam protocol string Protocol of service. Defaults to TCP.
 
 local k = import 'k.libsonnet';
@@ -17,9 +17,9 @@ local app = import 'nordstrom/simple-application/simple-application.libsonnet';
 local name = import 'param://name';
 local namespace = import 'param://namespace';
 local replicas = import 'param://replicas';
-local cpuRequest = import 'param://cpu-request';
-local memoryRequest = import 'param://memory-request';
-local containerPort = import 'param://container-port';
+local cpuRequest = import 'param://cpuRequest';
+local memoryRequest = import 'param://memoryRequest';
+local containerPort = import 'param://containerPort';
 local protocol = import 'param://protocol';
 local image = import 'param://image';
 
