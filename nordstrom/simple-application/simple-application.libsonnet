@@ -36,7 +36,7 @@
                              {
                                 "containerPort": containerPort,
                                 "name": "http",
-                                "protocol": protocol
+                                "protocol": if protocol == "UDP" then "UDP" else "TCP"
                              }
                           ],
                           "resources": {
@@ -80,7 +80,7 @@
                         name: "default-port",
                         port: containerPort,
                         targetPort: containerPort,
-                        "protocol": if protocol != "HTTP" then "UDP" else "TCP",
+                        "protocol": if protocol == "UDP" then "UDP" else "TCP"
                     },
                 ]
             },
