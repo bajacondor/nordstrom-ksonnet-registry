@@ -77,7 +77,7 @@
                 ],
                 ports: [
                     {
-                        name: "defaultPort",
+                        name: "default-port",
                         port: containerPort,
                         targetPort: containerPort,
                         "protocol": protocol,
