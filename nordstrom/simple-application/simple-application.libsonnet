@@ -80,7 +80,7 @@
                         name: "default-port",
                         port: containerPort,
                         targetPort: containerPort,
-                        "protocol": protocol,
+                        "protocol": if protocol != "HTTP" then "UDP" else "TCP",
                     },
                 ]
             },
