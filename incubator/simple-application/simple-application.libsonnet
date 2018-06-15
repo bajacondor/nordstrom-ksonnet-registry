@@ -1,4 +1,3 @@
-
 {
     parts:: {
         deployment(image, name, namespace, replicas=1, cpuRequest="300m", memoryRequest="200Mi", containerPort=8080, protocol="http"):: {
