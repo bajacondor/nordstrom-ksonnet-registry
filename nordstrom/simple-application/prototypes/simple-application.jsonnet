@@ -4,12 +4,12 @@
 // @shortDescription Deploy a simple app to kubernetes.
 // @param name string name of service.
 // @param image string Location and tag of container image.
-// @optionalParam namespace string Location and tag of image. Defaults to context.
-// @optionalParam replicas number Number of replicas. Defaults to 1.
-// @optionalParam cpuRequest string Requested cpu resources. Defaults to 300m.
-// @optionalParam memoryRequest string Requested memory resources. Defaults to 200Mi.
-// @optionalParam containerPort number Container port. Defaults to 8080.
-// @optionalParam protocol string Protocol of service. Defaults to TCP.
+// @optionalParam namespace string default K8S Namespace. Defaults to context.
+// @optionalParam replicas number 1 Number of replicas. Defaults to 1.
+// @optionalParam cpuRequest string 300m Requested cpu resources. Defaults to 300m.
+// @optionalParam memoryRequest string 200Mi Requested memory resources. Defaults to 200Mi.
+// @optionalParam containerPort number 808 Container port. Defaults to 8080.
+// @optionalParam protocol string HTTP Protocol of service. Defaults to HTTP.
 
 local k = import 'k.libsonnet';
 local app = import 'nordstrom/simple-application/simple-application.libsonnet';
