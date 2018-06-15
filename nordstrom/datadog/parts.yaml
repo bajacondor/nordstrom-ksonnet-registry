@@ -14,6 +14,7 @@
   "quickStart": {
     "prototype": "io.ksonnet.pkg.datadog-sidecar",
     "flags": {
+      "name": "sample-app",
       "apikey": "default"
     },
     "componentName": "datadog-sidecar",
