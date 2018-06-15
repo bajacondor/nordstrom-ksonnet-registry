@@ -14,14 +14,14 @@
 local k = import 'k.libsonnet';
 local app = import 'nordstrom/simple-application/simple-application.libsonnet';
 
-local name = "import 'param://name'";
-local namespace = "import 'param://namespace'";
-local replicas = if "import 'param://replicas'" == "" then 1 else "import 'param://replicas'";
-local cpuRequest = "import 'param://cpu-request'";
-local memoryRequest = "import 'param://memory-request'";
-local containerPort = if "import 'param://container-port'" == "" then 8080 else "import 'param://container-port'";
-local protocol = "import 'param://protocol'";
-local image = "import 'param://image'";
+local name = import 'param://name';
+local namespace = import 'param://namespace';
+local replicas = import 'param://replicas';
+local cpuRequest = import 'param://cpu-request';
+local memoryRequest = import 'param://memory-request';
+local containerPort = import 'param://container-port';
+local protocol = import 'param://protocol';
+local image = import 'param://image';
 
 k.core.v1.list.new([
   app.parts.deployment(
