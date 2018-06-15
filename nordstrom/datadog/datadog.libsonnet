@@ -9,7 +9,7 @@
                             image: "datadog/agent:6.2.1",
                             env: [
                                 {
-                                    name: "DATADOG_API_KEY",
+                                    name: "DD_API_KEY",
                                     valueFrom: {
                                         secretKeyRef: {
                                             name: secretName,
